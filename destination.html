@@ -28,6 +28,74 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+#galleryLightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.94);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  animation: fadeIn .25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#galleryLightbox img {
+  max-width: 92%;
+  max-height: 88%;
+  border-radius: 12px;
+  transform: scale(.9);
+  transition: transform .25s ease;
+}
+
+#galleryLightbox.show img {
+  transform: scale(1);
+}
+
+/* caption */
+.lb-caption {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 15px;
+  background: rgba(0,0,0,.5);
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+/* controls */
+.lb-close,
+.lb-prev,
+.lb-next {
+  position: absolute;
+  color: white;
+  font-size: 42px;
+  cursor: pointer;
+  user-select: none;
+  font-weight: bold;
+  transition: .2s;
+}
+
+.lb-close { top: 20px; right: 30px; }
+.lb-prev  { left: 30px; top: 50%; transform: translateY(-50%); }
+.lb-next  { right: 30px; top: 50%; transform: translateY(-50%); }
+
+.lb-prev:hover,
+.lb-next:hover,
+.lb-close:hover {
+  color: #3CB371;
+}
+</style>
 </head>
 
 <body>
@@ -52,11 +120,11 @@
             </div>
             <div class="col-lg-4 text-center text-lg-end">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <!--<a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>-->
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.facebook.com/share/18YZbukFYv/"><i class="fab fa-facebook-f fw-normal"></i></a>
                     <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=" https://www.instagram.com/leleioffice/profilecard/?igsh=MXR6azhjeXEzNXd1eg=="><i class="fab fa-instagram fw-normal"></i></a>
+                    <!--<a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>-->
                 </div>
             </div>
         </div>
@@ -161,7 +229,7 @@
 </a>
 
 <!-- Email -->
-<a href="mailto:info@leleiagency.com"
+<a href="mailto:leleioffice@gmail.com"
    class="btn text-white px-4"
    style="background-color:#44b33c; border-color:#44b33c;">
    <i class="fa fa-envelope me-2"></i> Email Us
@@ -219,14 +287,16 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>The Anchor Building, Floor 7, Room 702</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+254 115 767446</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>leleioffice@gmail.com</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Nairobi- The Anchor Building, Floor 7, Room 702</p>
+                    <p class="mb-2"></i>Eldoret- The Anchor Building, Floor 7, Room 702</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><a href="tel:+254743878374">+254 743 878 374</a></p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i><a href="mailto:leleioffice@gmail.com">leleioffice@gmail.com</a></p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <!--<a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>-->
+                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/share/18YZbukFYv/"><i class="fab fa-facebook-f"></i></a>
+                       <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>-->
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=" https://www.instagram.com/leleioffice/profilecard/?igsh=MXR6azhjeXEzNXd1eg=="><i class="fab fa-instagram fw-normal"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -239,16 +309,16 @@
                             <img class="img-fluid bg-light p-1" src="img/destination-3.jpg" alt="">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/destination-2.jpg" alt="">
+                            <img class="img-fluid bg-light p-1" src="img/gal3.jpg" alt="">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/destination-3.jpg" alt="">
+                            <img class="img-fluid bg-light p-1" src="img/gal4.jpg" alt="">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/destination-2.jpg" alt="">
+                            <img class="img-fluid bg-light p-1" src="img/gal5.jpg" alt="">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/destination-3.jpg" alt="">
+                            <img class="img-fluid bg-light p-1" src="img/gal6.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -333,6 +403,92 @@ document.addEventListener("DOMContentLoaded", function () {
   overlay.onclick = (e) => {
     if (e.target === overlay) overlay.style.display = "none";
   };
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const images = document.querySelectorAll(".row.g-2 img");
+  let currentIndex = 0;
+  let startX = 0;
+
+  // Create lightbox
+  const lightbox = document.createElement("div");
+  lightbox.id = "galleryLightbox";
+  lightbox.innerHTML = `
+    <span class="lb-close">&times;</span>
+    <span class="lb-prev">&#10094;</span>
+    <img src="" alt="">
+    <span class="lb-next">&#10095;</span>
+    <div class="lb-caption"></div>
+  `;
+  document.body.appendChild(lightbox);
+
+  const lbImg = lightbox.querySelector("img");
+  const caption = lightbox.querySelector(".lb-caption");
+
+  function showImage(index) {
+    currentIndex = index;
+    lbImg.src = images[index].src;
+    caption.textContent = images[index].alt || "";
+    lightbox.style.display = "flex";
+    setTimeout(() => lightbox.classList.add("show"), 10);
+  }
+
+  function nextImg() {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  }
+
+  function prevImg() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  }
+
+  // click images
+  images.forEach((img, index) => {
+    img.style.cursor = "pointer";
+    img.addEventListener("click", () => showImage(index));
+  });
+
+  // close
+  lightbox.querySelector(".lb-close").onclick = () => {
+    lightbox.style.display = "none";
+    lightbox.classList.remove("show");
+  };
+
+  // arrows
+  lightbox.querySelector(".lb-next").onclick = nextImg;
+  lightbox.querySelector(".lb-prev").onclick = prevImg;
+
+  // click outside
+  lightbox.onclick = (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = "none";
+      lightbox.classList.remove("show");
+    }
+  };
+
+  // keyboard support
+  document.addEventListener("keydown", (e) => {
+    if (lightbox.style.display === "flex") {
+      if (e.key === "ArrowRight") nextImg();
+      if (e.key === "ArrowLeft") prevImg();
+      if (e.key === "Escape") lightbox.style.display = "none";
+    }
+  });
+
+  // swipe support
+  lightbox.addEventListener("touchstart", e => {
+    startX = e.touches[0].clientX;
+  });
+
+  lightbox.addEventListener("touchend", e => {
+    let endX = e.changedTouches[0].clientX;
+    if (endX - startX > 50) prevImg();
+    if (startX - endX > 50) nextImg();
+  });
+
 });
 </script>
 </body>
